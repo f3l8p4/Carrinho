@@ -18,12 +18,12 @@
   </header>
     <div v-for="produto in produtos" :key="produto.id" class="w-40 m-10">
       <div class="card w-30 bg-base-100 shadow-xl">
-        <figure><img src=""/></figure>
+        <figure><img src="https://images.unsplash.com/photo-1657299156538-e08595d224ca?ixlib=rb-1.2.1&ixid=MnwxMjA3fDF8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"/></figure>
         <div class="card-body">
           <h2 class="fs-2 fw-bolder">{{produto.nome}}</h2>
           <p class="fs-1">{{produto.descricao}}</p>
           <div class="card-actions justify-end">
-            <button class="btn btn-success" @click="addCart(produto)">Add <i></i></button>
+            <button class="btn btn-success" @click="addCart(produto)">Add</button>
           </div>
         </div>
       </div>
@@ -43,6 +43,9 @@ export default {
     addCart(produto){
       console.log(produto)
     }
+  },
+  mounted() {
+    console.log(this.$store.state)
   },
 }
 </script>
