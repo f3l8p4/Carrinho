@@ -37,13 +37,9 @@ export default {
     return {
       produtos:this.$store.state.api.produto,
       cart: this.$store.state.api.cart,
-      state:false,
     }
   },
   methods: {
-    openModal(){
-      this.state = !this.state
-    },
     addCart(produto){
       console.log(produto)
     }
