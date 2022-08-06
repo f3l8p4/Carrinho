@@ -42,7 +42,10 @@ export default {
         name:'product-id',
         params:{
           id:produto.id,
-          nome:'Felipe'
+          nome:produto.nome,
+          descricao:produto.descricao,
+          preco:produto.preco,
+          categoria:produto.categoria
         }
       })
     }
