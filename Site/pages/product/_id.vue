@@ -10,6 +10,15 @@
 </template>
 <script>
     export default{
-        
+        data(){
+            return{
+                nome: this.$route.params.nome
+            }
+        },
+        head(){
+            return{
+                title:this.nome
+            }
+        }
     }
 </script>
