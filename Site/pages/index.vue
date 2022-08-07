@@ -14,7 +14,7 @@
         </div>
       </div>
     </div>
-    {{cart.value}}
+
 </div>
 </template>
 
@@ -34,8 +34,7 @@ export default {
     addCart(produto){
       const produto1 = [produto.id,produto.nome,produto.descricao,produto.preco,produto.categoria_id]
       console.log(produto1)
-      mapActions('paises', ['adicionarFavorito', 'deletarFavorito'])
-      this.$store.commit('cart/addCart',produto1)
+      this.$store.dispatch('cart/add',produto1)
       console.log(this.cart)
       
       //this.$store.dispatch('api/add',produto1)
@@ -60,6 +59,8 @@ export default {
   },
   mounted() {
     this.gerarDados()
+    console.log(this.$store.state.api.produto)
+    console.log(this.$store.getters.cart)
   },
 }
 </script>
