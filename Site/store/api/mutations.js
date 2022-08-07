@@ -2,10 +2,10 @@ export default{
     STORE(state,payload){
         state.produto = payload
     },
-    ADD({dispatch},state, data) {
-      state.cart.push({...data})
+    /*ADD({dispatch},state, payload) {
+      state.cart.push({...payload})
     },
-    /*STORECART(state,payload){
+    STORECART(state,payload){
       state.cart = payload
     }*/
 }
