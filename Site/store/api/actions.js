@@ -4,10 +4,10 @@ export default{
             commit('STORE',res)
         })
     },
-    get({commit,state},data){
+    /*get({commit,state},data){
         return state.cart
-    },
-    add({dispatch,commit},data) {
-        commit('ADD',data)
-    },
+    },*/
+    /*get({dispatch,commit}) {
+        commit('STORECART')
+    },*/
 }
