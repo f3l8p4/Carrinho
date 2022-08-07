@@ -1,4 +1,4 @@
-export const state = () =>{
-    produto:[]
-    cart:[]
-}
+export const state = () =>({
+    produto:[],
+    /*cart : 2*/
+})
