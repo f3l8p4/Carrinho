@@ -14,27 +14,35 @@
         </div>
       </div>
     </div>
+    {{cart.value}}
 </div>
 </template>
 
 <script>
+   import{mapActions,mapGetters} from 'vuex'
 export default {
+  computed:{
+    ...mapGetters('cart', ['cart', 'itens'])
+  },
   data() {
     return {
       produtos:this.$store.state.api.produto.data,
-      cart: this.$store.state.api,
+      cart: this.$store.state.cart.cart
     }
   },
   methods: {
     addCart(produto){
       const produto1 = [produto.id,produto.nome,produto.descricao,produto.preco,produto.categoria_id]
       console.log(produto1)
-      this.$store.dispatch('api/add',produto1)
+      mapActions('paises', ['adicionarFavorito', 'deletarFavorito'])
+      this.$store.commit('cart/addCart',produto1)
       console.log(this.cart)
+      
+      //this.$store.dispatch('api/add',produto1)
     },
     gerarDados(){
       this.$store.dispatch('api/getProduct')
-      this.$store.dispatch('api/get')
+      /*this.$store.dispatch('api/get')*/
     },
     page(produto){
       
@@ -45,7 +53,7 @@ export default {
           nome:produto.nome,
           descricao:produto.descricao,
           preco:produto.preco,
-          categoria:produto.categoria
+          categoria:produto.categoria_id
         }
       })
     }
