@@ -1,22 +1,26 @@
 <template>
-    <div>
-      {{product}}
-        <header>
-            <nav class="bg-white border-gray-200 px-4 lg:px-6 py-2.5 dark:bg-gray-800">
-                <div class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
-                    <nuxt-link to="/">
-                      <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Site de compras</span>
-                    </nuxt-link>
-                    <div class="dropdown dropdown-end">
-                      <button tabindex="0" class="m-1">Carrinho</button>
-                      <ul v-for="product in products" :key="products.id" tabindex="0" class="dropdown-content menu p-2 shadow bg-base-100 rounded-box w-52">
-                          <li>{{product.nome}}</li>
-                      </ul>
-                    </div>
-                  </div>
-            </nav>
-        </header>
+  <div class="navbar bg-base-300">
+    <div class="flex-1">
+      <nuxt-link to="" class="normal-case text-xl text-light ml-6 text-white"> Sistema de Compras </nuxt-link>
     </div>
+    <div class="flex-none">
+      <div class="dropdown dropdown-end">
+        <label tabindex="0" class="btn btn-ghost btn-circle">
+          <div class="indicator">
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="bg-white" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" /></svg>
+            <span class="badge badge-sm indicator-item">1</span>
+          </div>
+        </label>
+        <div tabindex="0" class="mt-3 card card-compact dropdown-content w-52 bg-base-100 shadow">
+          <div class="card-body">
+            <span class="font-bold text-lg">Itens adicionados</span>
+            <span class="text-info">Produto:</span>
+            <span class="text-info">preço:</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </template>
 <script>
     export default{
