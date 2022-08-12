@@ -13,7 +13,9 @@
                         <option>Cheque</option>
                         <option>Boleto</option>
                       </select>
-                      {{selected}}
+                      <div v-show="State">
+                        Informe um tipo de pagamento primeiro
+                      </div>
                     </div>
                     <user/>
                     <div v-if="selected == 'Cartão' " class="form-control mt-3 mb-3">
@@ -41,11 +43,15 @@
                 descricao: this.$route.params.descricao,
                 preco: this.$route.params.preco,
                 categoria_id : this.$route.params.categoria
-                }
+                },
+                State : false
             }
         },
         methods: {
             addShop(){
+                if(this.selected == ''){
+                    this.State = !this.State
+                }
                 this.$store.dispatch('shop/add',this.shop)
             }
         },
