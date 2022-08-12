@@ -39,7 +39,7 @@ export default {
         preco : produto.preco,
         categoria_id : produto.categoria_id
       }
-      this.$store.dispatch('cart/add',produto1)
+      this.$store.commit('cart/addCart',produto1)
       //console.log(this.cart)
       
       //this.$store.dispatch('api/add',produto1)

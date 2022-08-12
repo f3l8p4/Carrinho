@@ -11,8 +11,8 @@ export const state = () => ({
     },
   }
   export const mutations = {
-    addCart (state, payload) {
-      state.cart.push({ ...payload.cart })
+    addCart (state, params) {
+      state.cart.push({ ...params })
     },
     deleteCart (state, payload) {
       state.cart = state.cart.filter(x => x.id !== payload)

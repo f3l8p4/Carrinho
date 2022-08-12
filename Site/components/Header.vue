@@ -1,6 +1,5 @@
 <template>
   <div class="navbar bg-base-300">
-    {{product}}
     <div class="flex-1">
       <nuxt-link to="/" class="normal-case text-xl text-light ml-6 text-white"> Sistema de Compras </nuxt-link>
     </div>

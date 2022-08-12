@@ -2,10 +2,14 @@ export const state = () => ({
     shop: []
  })
 
-
+ export const getters = {
+  shop (state) {
+    return state.shop
+  },
+}
  export const mutations = {
     addShop (state, payload) {
-      state.shop.push({ ...payload.shop })
+      state.shop.push({ ...payload })
     },
     deleteShop (state, payload) {
       state.shop = state.shop.filter(x => x.id !== payload)

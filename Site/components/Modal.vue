@@ -35,7 +35,7 @@
         data() {
             return {
                 selected:'',
-                user:{
+                shop:{
                 id: this.$route.params.id,
                 nome: this.$route.params.nome,
                 descricao: this.$route.params.descricao,
@@ -46,7 +46,7 @@
         },
         methods: {
             addShop(){
-                console.log(this.user)
+                this.$store.dispatch('shop/add',this.shop)
             }
         },
     }
