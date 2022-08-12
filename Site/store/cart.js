@@ -20,8 +20,8 @@ export const state = () => ({
   }
   
   export const actions = {
-    add ({ commit }, payload) {
-      commit('addCart', payload)
+    add ({ commit,dispatch }, param) {
+      commit('addCart', param)
     },
     
   }
