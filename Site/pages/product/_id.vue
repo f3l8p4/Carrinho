@@ -41,7 +41,9 @@
             }
         },
         methods: {
-            
+            addCart(){
+                this.$store.dispatch('shop/addShop',this.user)
+            }
         },
     }
 </script>
