@@ -3,7 +3,7 @@
     <div class="flex-1">
       <nuxt-link to="/" class="normal-case text-xl text-light ml-6 text-white"> Sistema de Compras </nuxt-link>
     </div>
-    <div class="btn btn-ghost rounded mr-5">
+    <div class="btn btn-ghost rounded mr-5 text-white">
       <nuxt-link to="/pedidos">Meus pedidos</nuxt-link>
     </div>
     <div class="flex-none">
@@ -17,12 +17,13 @@
         <div tabindex="0" class="mt-3 card card-compact dropdown-content w-52 bg-base-100 shadow">
           <div class="card-body">
             <span class="font-bold text-lg">Itens adicionados</span>
+            <div v-if="product == ''" class="texto-danger"> Ainda não há produtos no carrinho</div>
             <div v-for="product in product" :key="product.id" >
               <span class="text-info">Produto: {{product.nome}}</span> <br>
               <span class="text-info">preço:{{product.preco}}</span>
               <hr>
             </div>
-              Total dos Itens: {{product.preco++}}
+            Total dos Itens: {{product.preco}}
           </div>
         </div>
       </div>
@@ -39,6 +40,7 @@
         data() {
           return {
             product: this.$store.state.cart.cart,
+
           }
         },
         mounted() {
