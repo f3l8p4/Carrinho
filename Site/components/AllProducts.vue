@@ -1,6 +1,6 @@
 <template>
     <div>
-        <h2 class="m-3 text-4xl text-white-50 fw-light">Produtos comprados</h2>
+<!--    <h2 class="m-3 text-4xl text-white-50 fw-light">Produtos comprados</h2>
         <hr>
         <div class="overflow-x-auto mt-3">
             <table class="table table-zebra w-full">
@@ -12,7 +12,8 @@
                   <th>Descrição</th>
                 </tr>
               </thead>
-              <tbody v-for="shop in shop" :key="shop.id">
+-->          
+              <tbody>
                 <tr>
                   <th>{{shop.id}}</th>
                   <td>{{shop.nome}}</td>
@@ -20,8 +21,10 @@
                   <td>{{shop.descricao}}</td>
                 </tr>
               </tbody>
-            </table>
+<!--           </table>
           </div>
+    </div>
+-->
     </div>
 </template>
 <script>

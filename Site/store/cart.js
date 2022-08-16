@@ -4,7 +4,7 @@ export const state = () => ({
   
   export const getters = {
     cart (state) {
-      return state.cart
+      return state.produto
     },
     itens (state) {
       return state.cart.length

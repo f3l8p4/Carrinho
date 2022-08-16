@@ -7,6 +7,7 @@
                 <span class="badge badge-sm indicator-item">{{count}}</span>
               </div>
             </label>
+   
             <div tabindex="0" class="mt-3 card card-compact dropdown-content w-52 bg-base-100 shadow">
               <div class="card-body">
                 <span class="font-bold text-lg">Itens adicionados</span>
@@ -15,18 +16,19 @@
                   <span class="text-info">Produto: {{product.nome}}</span> <br>
                   <span class="text-info">preço:{{product.preco}}</span>
                   <hr>
+                  Total dos Itens: {{product.preco}}
                 </div>
-                Total dos Itens: {{product.preco}}
-              </div>
+                
+                </div>
             </div>
         </div>
+  
     </div>
 </template>
 <script>
     import {mapGetters} from 'vuex'
     export default{
         computed:{
-          ...mapGetters({count: 'cart/itens'}),
           ...mapGetters({produtos: 'cart/cart'})
         },
         data() {
@@ -34,5 +36,6 @@
             product: this.$store.state.cart.cart,
           }
         },
+        
     }
 </script>
