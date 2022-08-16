@@ -28,18 +28,10 @@
 <script>
     import {mapGetters} from 'vuex'
     export default{
-        computed:{
-            ...mapGetters['shop']
-        },
         data(){
             return{
                 shop:this.$store.state.shop.shop
             }
-        },
-        methods: {
-            
-        },
-        mounted() {
         },
     }
 </script>
