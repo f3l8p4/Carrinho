@@ -17,7 +17,7 @@
         <div tabindex="0" class="mt-3 card card-compact dropdown-content w-52 bg-base-100 shadow">
           <div class="card-body">
             <span class="font-bold text-lg">Itens adicionados</span>
-            <div v-if="product == ''" class="texto-danger"> Ainda não há produtos no carrinho</div>
+            <div v-if="product == '' " class=" text-danger"> Ainda não há produtos no carrinho</div>
             <div v-for="product in product" :key="product.id" >
               <span class="text-info">Produto: {{product.nome}}</span> <br>
               <span class="text-info">preço:{{product.preco}}</span>
