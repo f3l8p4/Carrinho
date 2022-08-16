@@ -1,5 +1,5 @@
 <template>
-    <div produto>
+    <div>
                 <img @click="page(produto)" class="p-8 cursor-pointer rounded-t-lg" src="" alt="product image"/>
                 <div class="px-5 pb-5 mb-6 d-inline-flex ">
                         <h5 class="text-xl font-semibold tracking-tight text-gray-900 dark:text-white mb-2">{{produto.nome}}</h5>

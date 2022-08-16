@@ -29,7 +29,8 @@
     import {mapGetters} from 'vuex'
     export default{
         computed:{
-          ...mapGetters({produtos: 'cart/cart'})
+          ...mapGetters({produtos: 'cart/cart'}),
+          ...mapGetters({count:'cart/itens'})
         },
         data() {
           return {
