@@ -5,7 +5,7 @@
       <h3 class="text-4xl font-extralight text-white mb-4">Melhores produtos</h3>
       <hr class="divide-y divide-dashed">
       <div class="flex  divide-x">
-        <CardProduct :produto="produtos" v-for="produto in produtos" :key="produto.id"></CardProduct>
+        <CardProduct v-for="produto in produto" :key="produto.id" :produto="produto"></CardProduct>
       </div>
   </div>
 
@@ -15,8 +15,10 @@
 <script>
    import{mapActions,mapGetters} from 'vuex'
 export default {
-  computed:{
-    ...mapGetters({produtos:'api/produto'})
+  data(){
+    return{
+      produto: this.$store.state.api.produto.data
+    }
   },
   methods: {
     generateData(){
