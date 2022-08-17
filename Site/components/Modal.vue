@@ -38,11 +38,11 @@
             return {
                 selected:'',
                 shop:{
-                id: this.$route.params.id,
-                nome: this.$route.params.nome,
-                descricao: this.$route.params.descricao,
-                preco: this.$route.params.preco,
-                categoria_id : this.$route.params.categoria
+                  id: this.$route.params.id,
+                  nome: this.$route.params.nome,
+                  descricao: this.$route.params.descricao,
+                  preco: this.$route.params.preco,
+                  categoria_id : this.$route.params.categoria
                 },
                 State : false
             }
