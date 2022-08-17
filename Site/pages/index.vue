@@ -5,7 +5,7 @@
       <h3 class="text-4xl font-extralight text-white mb-4">Melhores produtos</h3>
       <hr class="divide-y divide-dashed">
       <div class="flex  divide-x">
-        <CardProduct v-for="produto in produtos" :key="produto.id"></CardProduct>
+        <CardProduct :produto="produtos" v-for="produto in produtos" :key="produto.id"></CardProduct>
       </div>
   </div>
 
