@@ -15,28 +15,21 @@
     export default{
         props:['produto'],
         methods: {
-        addCart(produto){
-        this.$store.commit('cart/addCart',produto)
-        },
-        page(produto){ 
-            this.$router.push({
-            name:'product-id',
-            params:{
-                id:produto.id,
-                nome:produto.nome,
-                descricao:produto.descricao,
-                preco:produto.preco,
-                categoria:produto.categoria_id
-            }
-        })
-        },
-        generateData(){
-            this.$store.dispatch('api/getProduct')
+            addCart(produto){
+                this.$store.commit('cart/addCart',produto)
+            },
+            page(produto){ 
+                this.$router.push({
+                name:'product-id',
+                params:{
+                    id:produto.id,
+                    nome:produto.nome,
+                    descricao:produto.descricao,
+                    preco:produto.preco,
+                    categoria:produto.categoria_id
+                }
+            })
+            },
         }
-        },
-        mounted() {
-           this.generateData()
-        },
-
     }
 </script>
