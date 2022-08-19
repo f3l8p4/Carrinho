@@ -9,7 +9,7 @@
                 <h1 class="text-2xl">R${{this.$route.params.preco}}</h1>
                 <span @click="" class="btn-info">Add to cart</span>
                 <label for="modal" class="btn-info modal-button">Comprar Produto</label>
-                <Modal></Modal>
+                <ModalAdd></ModalAdd>
               </div>
           </div>
         </div>
