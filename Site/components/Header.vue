@@ -23,10 +23,6 @@
             product: this.$store.state.cart.cart
           }
         },
-        mounted() {
-         console.log(this.count)
-         console.log(this.product)
-        },
         methods: {
 
         }

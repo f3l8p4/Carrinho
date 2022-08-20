@@ -4,7 +4,7 @@
     <div class="mt-5">
       <h3 class="text-4xl font-extralight text-white mb-4">Melhores produtos</h3>
       <hr class="divide-y divide-dashed">
-      <div class="flex  divide-x">
+      <div class="flex">
         <CardProduct v-for="produto in produto" :key="produto.id" :produto="produto"></CardProduct>
       </div>
   </div>

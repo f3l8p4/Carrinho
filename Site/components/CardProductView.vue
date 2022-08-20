@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="card card lg:card-side bg-base-200">
+        <div v-if="product.id === null" class="card card lg:card-side bg-base-200">
             <figure><img src="https://media.istockphoto.com/id/1384041600/pt/foto/table-or-chair-in-bedroom-studio-or-hotel-suite-room-with-wooden-modern-style-design-and.webp?s=612x612&w=is&k=20&c=mFGDy7P5DO2t8bnuoA7edXWt4aemRFCK-r6p2w1sYpo=" alt="produto"></figure>
             <div class="card-body">
               <h1 class="text-3xl">{{product.nome}}</h1>
@@ -12,6 +12,10 @@
                 <ModalAdd></ModalAdd>
               </div>
           </div>
+        </div>
+        <div v-else>
+            Não há produtos disponiveis
+            <nuxt-link class="text-info"to="/">Clique aqui para voltar a tela inicial</nuxt-link>
         </div>
     </div>
 </template>
@@ -32,6 +36,9 @@
             addShop(){
                 this.$store.dispatch('shop/addShop',this.product)
             }
+        },
+        mounted() {
+            //console.log(this.product)
         },
     }
 </script>
