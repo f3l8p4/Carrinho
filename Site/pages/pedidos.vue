@@ -15,7 +15,6 @@
                   </thead>
                   <AllProducts v-for="shop in shop" :key="shop.id" :shop="shop"></AllProducts>
                 </table>
-          </table>
         </div>
       </div>
 </template>
