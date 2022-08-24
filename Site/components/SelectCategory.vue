@@ -25,16 +25,27 @@
         methods: {
             filterItens(){
                 let produto= this.produto
-                produto.forEach(produto => {
-                    if(this.filtered == ''){
+                /*produto.forEach(produto => {
+                    if(this.category == 0){
                     this.filtered = {...produto}
                 }
                     if(produto.categoria_id == this.category){
                         this.filtered = {...produto}
                     }
                 });
+                */
+               produto.filter(produto=>{
+                if(produto.categoria_id == this.category){
+                    this.filtered = {...produto}
+                    return this.filtered
+                }
+               })
                 this.$emit('productFiltered',this.filtered)
             }
         },
+        mounted() {
+            console.log(this.category)
+        },
     }
 </script>
+
