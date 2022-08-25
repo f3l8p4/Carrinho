@@ -12,6 +12,10 @@
         <Cart></Cart>
     </div>
 
+    <div class="">
+      <Search></Search>
+    </div>
+
     </div>
 </template>
 <script>

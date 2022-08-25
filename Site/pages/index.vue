@@ -6,7 +6,7 @@
       <hr class="divide-y divide-dashed">
       <SelectCategory :produto="produto" @productFiltered="filterItens"></SelectCategory>
       <div class="flex">
-        <CardProduct v-for="produto in itensFiltered" :key="produto.id" :produto="itensFiltered"></CardProduct>
+        <CardProduct v-for="itensFiltered in itensFiltered" :key="produto.id" :produto="itensFiltered"></CardProduct>
       </div>
   </div>
 
@@ -14,7 +14,6 @@
 </template>
 
 <script>
-import{mapActions,mapGetters} from 'vuex'
 export default {
   data(){
     return{
@@ -27,7 +26,7 @@ export default {
       this.$store.dispatch('api/getProduct')
     },
     filterItens(value){
-      if(this.itensFiltered == null){
+      if(this.itensFiltered === ''){
         this.itensFiltered = this.produto
       }
       this.itensFiltered = value
@@ -35,8 +34,7 @@ export default {
     }
   },
   mounted() {
-    this.generateData()
-    this.filterItens()
+    
   },
 }
 </script>

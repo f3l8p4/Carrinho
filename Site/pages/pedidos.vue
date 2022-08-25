@@ -23,7 +23,7 @@
     export default{
       data() {
         return {
-          shop: this.$store.state.shop.shop
+          shop: this.$store.state.shop.shop,
         }
       },
       methods: {
