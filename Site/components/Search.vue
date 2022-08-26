@@ -36,7 +36,7 @@
                 let item = this.produto
                 let searchProduto = this.searchProduto
                 this.searched =  item.filter(search=>{
-                    if(search.nome == searchProduto){
+                    if(search.nome === searchProduto){
                         return searchProduto
                     }
                 })

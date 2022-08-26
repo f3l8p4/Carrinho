@@ -13,7 +13,7 @@
                       <th>Descrição</th>
                     </tr>
                   </thead>
-                  <AllProducts v-for="shop in shop" :key="shop.id" :shop="shop"></AllProducts>
+                  <OrderItem v-for="shop in shop" :key="shop.id" :shop="shop"></OrderItem>
                 </table>
         </div>
       </div>
