@@ -12,7 +12,7 @@
               <div class="card-body">
                 <span class="font-bold text-lg">Itens adicionados</span>
                 <div v-if="product === '' " class="text-danger"> Ainda não há produtos no carrinho</div>
-                <div v-for="product in product" :key="product.id" >
+                <div class="" v-for="product in product" :key="product.id" >
                   <span class="text-info">Produto: {{product.nome}}</span> <br>
                   <span class="text-info">preço:{{product.preco}}</span>
                   <hr>

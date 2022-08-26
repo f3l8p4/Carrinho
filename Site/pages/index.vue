@@ -1,12 +1,12 @@
 <template>
   <div class="bg-dark">
-    <Header></Header>
+    <Header :produto="produto"></Header>
     <div class="mt-5">
       <h3 class="text-4xl font-extralight text-white mb-4">Melhores produtos</h3>
       <hr class="divide-y divide-dashed">
       <SelectCategory :produto="produto" @productFiltered="filterItens"></SelectCategory>
       <div class="flex">
-        <CardProduct v-for="itensFiltered in itensFiltered" :key="produto.id" :produto="itensFiltered"></CardProduct>
+        <CardProduct v-for="produto in itensFiltered" :key="produto.id" :produto="itensFiltered"></CardProduct>
       </div>
   </div>
 
@@ -34,7 +34,7 @@ export default {
     }
   },
   mounted() {
-    
+    this.generateData()
   },
 }
 </script>

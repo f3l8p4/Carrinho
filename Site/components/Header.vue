@@ -13,7 +13,7 @@
     </div>
 
     <div class="">
-      <Search></Search>
+      <Search :produto="produto"></Search>
     </div>
 
     </div>
@@ -21,13 +21,17 @@
 <script>
     import {mapGetters} from 'vuex'
     export default{
+        props:['produto'],
         data() {
           return {
             product: this.$store.state.cart.cart
           }
         },
         methods: {
-
-        }
+          
+        },
+        mounted() {
+          console.log(this.produto)
+        },
     }
 </script>
